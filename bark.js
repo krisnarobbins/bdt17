@@ -1,10 +1,21 @@
-var dog ={
-		barkCount = 0,
+var dogs ={
+	count : 1,
     bark : function() {
-    	this.barkCount++;
-    }
-}
+    	return 'guk';
+    },
+    dogCount : function(){
+        return this.count;
 
-dog.bark()
-var bark = dog.bark;
-bark();
+    },
+    setName : function(name) {
+        this.dogName = name;
+    },
+    getName : function() {
+        return this.dogName;
+    }
+};
+
+dogs.setName("doggy");
+console.log(dogs.bark());
+console.log(dogs.dogCount());
+console.log(dogs.getName());
